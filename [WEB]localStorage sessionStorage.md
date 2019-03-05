@@ -8,7 +8,7 @@
 localStorage data는 사용자가 지우지 않는 한 브라우저에 남아있다.
 sessionStorage data는 이름 그대로 세션이 유지된 상태에서 스토리지에 저장하기 때문에 세션이 종료되면 sessionStorage data는 모두 사라진다.
 
-##### 브라우저가 지원하는지 확인 방법
+#### 브라우저가 지원하는지 확인 방법
 
 
 ```javascript
@@ -19,7 +19,7 @@ if (typeof(Storage) !== "undefined") {
 }
 ```
 
-#### localStorage
+### localStorage
 - Storage 객체를 상속받는다.
 - window.localStorage
 - 데이터 저장: setItem(key, value)
@@ -35,7 +35,7 @@ if (typeof(Storage) !== "undefined") {
     ~~~
     
     
-#### sessionStorage
+### sessionStorage
 - Storage 객체를 상속받는다.
 - window.sessionStorage
 - 데이터 저장: setItem(key, value)
