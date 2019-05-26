@@ -23,6 +23,10 @@
 - 테스트 코드 작성/리팩토링 기법
 - 버전 관리 전략
     - branch 정책 등
+    
+- front-end
+    - typescript
+    - jquery
 
 
 참고: [백엔드 개발자를 꿈꾸는 학생개발자에게](https://d2.naver.com/news/3435170)
