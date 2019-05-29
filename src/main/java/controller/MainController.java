@@ -12,4 +12,9 @@ public class MainController {
     public String main() {
         return "index";
     }
+
+    @RequestMapping("/checkArrayObject")
+    public void checkArrayObject() {
+        System.out.println(123);
+    }
 }
