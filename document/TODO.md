@@ -2,3 +2,4 @@
 - [ ] Jenkins 변경사항이 존재하는 경우에만 빌드하는 방법(Poll SCM)
 - [ ] Jenkins 커버리지 수치 적용하는 방법
 - [ ] GC 정리
+- [ ] Requestpart annotation
