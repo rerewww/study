@@ -12,5 +12,10 @@
   </head>
   <body>
   <button cmd="checkArrayObject">TEST</button>
+  <form id="sendFiles" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="button" cmd='fileInfos' value="전송">
+  </form>
+  <p id="result"></p>
   </body>
 </html>
