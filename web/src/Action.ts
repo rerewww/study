@@ -2,8 +2,10 @@
  * Created by son on 2019-05-29.
  */
 import $ from 'jquery'
+import {Renderer} from "./Renderer";
 
 export class Action {
+    private renderer = new Renderer();
     public checkArrayObject(): void {
         $.ajax({
             url: '/checkArrayObject',
@@ -18,6 +20,7 @@ export class Action {
     }
 
     public fileInfos(): void {
+        const self = this;
         const form = $('#sendFiles')[0];
         const formData = new FormData(form);
         $.ajax({
@@ -27,7 +30,7 @@ export class Action {
             contentType: false,
             data: formData,
             success(response) {
-                console.log(response);
+                console.log(response.data);
             },
             error(response) {
                 console.log(response);
