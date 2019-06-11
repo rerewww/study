@@ -3,3 +3,5 @@
 - [ ] Jenkins 커버리지 수치 적용하는 방법
 - [ ] GC 정리
 - [ ] Requestpart annotation
+- [ ] git warnning
+
