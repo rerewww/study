@@ -22,4 +22,9 @@ public class DaysTest {
 	public void lastYear() {
 		System.out.println(String.format("지난 해: %s", days.lastYear()));
 	}
+
+	@Test
+	public void thisWeek() {
+		System.out.println(String.format("이번 주: %s", days.thisWeek()));
+	}
 }

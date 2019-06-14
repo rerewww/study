@@ -76,4 +76,24 @@ public class Days {
 		String last = dateFormat.format(calendar.getTime());
 		return String.format("%s %s", first, last);
 	}
+
+	/**
+	 * 이번 주
+	 */
+	public String thisWeek() {
+		Date date = new Date();
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(date);
+
+		// DAY_OF_WEEK: 이번 주의 요일을 셋팅한다.
+		int thisDay = calendar.get(Calendar.DAY_OF_WEEK);
+
+		calendar.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
+		String first = dateFormat.format(calendar.getTime());
+
+		calendar.set(Calendar.DAY_OF_WEEK, thisDay);
+		String last = dateFormat.format(calendar.getTime());
+
+		return String.format("%s %s", first, last);
+	}
 }
