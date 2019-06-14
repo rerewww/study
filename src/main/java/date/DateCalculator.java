@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * Created by son on 2019-06-14.
  */
-public class Days {
+public class DateCalculator {
 	// 월요일 기준으로 화,수,목,금,토,일
 	private static final int WEEK_DAYS = 6;
 	private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
