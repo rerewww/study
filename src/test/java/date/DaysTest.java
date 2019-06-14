@@ -12,4 +12,9 @@ public class DaysTest {
 	public void lastWeek() {
 		System.out.println(days.lastWeek());
 	}
+
+	@Test
+	public void lastMonth() {
+		System.out.println(days.lastMonth());
+	}
 }
