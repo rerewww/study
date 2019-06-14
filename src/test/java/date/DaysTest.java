@@ -10,11 +10,16 @@ public class DaysTest {
 
 	@Test
 	public void lastWeek() {
-		System.out.println(days.lastWeek());
+		System.out.println(String.format("지난 주: %s", days.lastWeek()));
 	}
 
 	@Test
 	public void lastMonth() {
-		System.out.println(days.lastMonth());
+		System.out.println(String.format("지난 달: %s", days.lastMonth()));
+	}
+
+	@Test
+	public void lastYear() {
+		System.out.println(String.format("지난 해: %s", days.lastYear()));
 	}
 }

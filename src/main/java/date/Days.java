@@ -10,7 +10,7 @@ import java.util.Date;
 public class Days {
 	// 월요일 기준으로 화,수,목,금,토,일
 	private static final int WEEK_DAYS = 6;
-	private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
+	private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
 	/**
 	 * 지난 주
@@ -27,10 +27,10 @@ public class Days {
 		int firstDayOflastWeek = -(today + WEEK_DAYS);
 
 		calendar.add(Calendar.DATE, firstDayOflastWeek);
-		String first = DATE_FORMAT.format(calendar.getTime());
+		String first = dateFormat.format(calendar.getTime());
 
 		calendar.add(Calendar.DATE, WEEK_DAYS);
-		String last = DATE_FORMAT.format(calendar.getTime());
+		String last = dateFormat.format(calendar.getTime());
 
 		return String.format("%s %s", first, last);
 	}
@@ -48,10 +48,10 @@ public class Days {
 
 		calendar.add(Calendar.MONTH, index);
 		calendar.set(Calendar.DAY_OF_MONTH, calendar.getActualMinimum(Calendar.DAY_OF_MONTH));
-		String first = DATE_FORMAT.format(calendar.getTime());
+		String first = dateFormat.format(calendar.getTime());
 
 		calendar.set(Calendar.DAY_OF_MONTH, calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
-		String last = DATE_FORMAT.format(calendar.getTime());
+		String last = dateFormat.format(calendar.getTime());
 		return String.format("%s %s", first, last);
 	}
 
@@ -59,6 +59,21 @@ public class Days {
 	 * 지난 해
 	 */
 	public String lastYear() {
-		return "";
+		Date date = new Date();
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(date);
+
+		int index = calendar.get(Calendar.YEAR) - 1;
+
+		calendar.set(Calendar.YEAR, index);
+		calendar.set(Calendar.MONTH, 0);
+		calendar.set(Calendar.DAY_OF_MONTH, calendar.getActualMinimum(Calendar.DAY_OF_MONTH));
+		String first = dateFormat.format(calendar.getTime());
+
+		calendar.set(Calendar.YEAR, index);
+		calendar.set(Calendar.MONTH, 11);
+		calendar.set(Calendar.DAY_OF_MONTH, calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
+		String last = dateFormat.format(calendar.getTime());
+		return String.format("%s %s", first, last);
 	}
 }
