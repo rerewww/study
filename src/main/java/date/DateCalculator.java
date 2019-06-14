@@ -10,6 +10,7 @@ import java.util.Date;
 public class DateCalculator {
 	// 월요일 기준으로 화,수,목,금,토,일
 	private static final int WEEK_DAYS = 6;
+	private static final String DATE_STRING_FORMAT = "%s %s";
 	private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
 	/**
@@ -32,7 +33,7 @@ public class DateCalculator {
 		calendar.add(Calendar.DATE, WEEK_DAYS);
 		String last = dateFormat.format(calendar.getTime());
 
-		return String.format("%s %s", first, last);
+		return String.format(DATE_STRING_FORMAT, first, last);
 	}
 
 	/**
@@ -52,7 +53,7 @@ public class DateCalculator {
 
 		calendar.set(Calendar.DAY_OF_MONTH, calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
 		String last = dateFormat.format(calendar.getTime());
-		return String.format("%s %s", first, last);
+		return String.format(DATE_STRING_FORMAT, first, last);
 	}
 
 	/**
@@ -74,7 +75,7 @@ public class DateCalculator {
 		calendar.set(Calendar.MONTH, 11);
 		calendar.set(Calendar.DAY_OF_MONTH, calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
 		String last = dateFormat.format(calendar.getTime());
-		return String.format("%s %s", first, last);
+		return String.format(DATE_STRING_FORMAT, first, last);
 	}
 
 	/**
@@ -94,7 +95,7 @@ public class DateCalculator {
 		calendar.set(Calendar.DAY_OF_WEEK, thisDay);
 		String last = dateFormat.format(calendar.getTime());
 
-		return String.format("%s %s", first, last);
+		return String.format(DATE_STRING_FORMAT, first, last);
 	}
 
 	/**
@@ -112,7 +113,7 @@ public class DateCalculator {
 		calendar.set(Calendar.DATE, thisDate);
 		String last = dateFormat.format(calendar.getTime());
 
-		return String.format("%s %s", first, last);
+		return String.format(DATE_STRING_FORMAT, first, last);
 	}
 
 	/**
@@ -134,6 +135,6 @@ public class DateCalculator {
 		calendar.set(Calendar.DATE, thisDate);
 		String last = dateFormat.format(calendar.getTime());
 
-		return String.format("%s %s", first, last);
+		return String.format(DATE_STRING_FORMAT, first, last);
 	}
 }
