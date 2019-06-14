@@ -96,4 +96,44 @@ public class Days {
 
 		return String.format("%s %s", first, last);
 	}
+
+	/**
+	 * 이번 달
+	 */
+	public String thisMonth() {
+		Date date = new Date();
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(date);
+
+		int thisDate = calendar.get(Calendar.DATE);
+
+		calendar.set(Calendar.DATE, 1);
+		String first = dateFormat.format(calendar.getTime());
+		calendar.set(Calendar.DATE, thisDate);
+		String last = dateFormat.format(calendar.getTime());
+
+		return String.format("%s %s", first, last);
+	}
+
+	/**
+	 * 올해
+	 */
+	public String thisYear() {
+		Date date = new Date();
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(date);
+
+		int thisMonth = calendar.get(Calendar.MONTH);
+		int thisDate = calendar.get(Calendar.DATE);
+
+		calendar.set(Calendar.MONTH, 0);
+		calendar.set(Calendar.DATE, 1);
+		String first = dateFormat.format(calendar.getTime());
+
+		calendar.set(Calendar.MONTH, thisMonth);
+		calendar.set(Calendar.DATE, thisDate);
+		String last = dateFormat.format(calendar.getTime());
+
+		return String.format("%s %s", first, last);
+	}
 }

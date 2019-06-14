@@ -27,4 +27,14 @@ public class DaysTest {
 	public void thisWeek() {
 		System.out.println(String.format("이번 주: %s", days.thisWeek()));
 	}
+
+	@Test
+	public void thisMonth() {
+		System.out.println(String.format("이번 달: %s", days.thisMonth()));
+	}
+
+	@Test
+	public void thisYear() {
+		System.out.println(String.format("올해: %s", days.thisYear()));
+	}
 }
