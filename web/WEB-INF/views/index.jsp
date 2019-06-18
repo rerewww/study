@@ -14,7 +14,11 @@
   <button cmd="checkArrayObject">TEST</button>
   <form id="sendFiles" enctype="multipart/form-data">
     <input type="file" name="file">
-    <input type="button" cmd='fileInfos' value="전송">
+    <input type="button" cmd='upload' value="전송">
+  </form>
+  <form id="downloadFile">
+    <input type="file" name="file">
+    <input type="button" cmd='download' value="다운로드">
   </form>
   <p id="result"></p>
   </body>

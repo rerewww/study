@@ -18,13 +18,15 @@ export class Action {
             }
         });
     }
+    public download(): void {
+        $("body").append("<iframe src='/download.cmd' style='display: none;' ></iframe>");
+    }
 
-    public fileInfos(): void {
-        const self = this;
+    public upload(): void {
         const form = $('#sendFiles')[0];
         const formData = new FormData(form);
         $.ajax({
-            url: '/download',
+            url: '/upload.cmd',
             type: 'post',
             processData: false,
             contentType: false,

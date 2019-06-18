@@ -33,8 +33,8 @@ public class MainController {
     }
 
     @ResponseBody
-    @RequestMapping("upload.cmd")
-    public AjaxModel fileInfos(
+    @RequestMapping(value = "upload.cmd", method = RequestMethod.POST)
+    public AjaxModel upload(
             @RequestParam("file") MultipartFile file) throws IOException {
         Map<String, Object> result = new HashMap<>();
         result.put("fileName", file.getOriginalFilename());
@@ -45,14 +45,18 @@ public class MainController {
         return new AjaxModel(true, result);
     }
 
-    @RequestMapping(value = "download", method = RequestMethod.GET)
-    public void download(@RequestParam("file") MultipartFile file, HttpServletResponse response) throws IOException {
+    @RequestMapping(value = "download.cmd")
+    public void download(
+            HttpServletResponse response,
+            @RequestParam("fileName") String fileName,
+            @RequestParam("fileExt") String fileExt) throws IOException {
+        String originFileName = String.format("%s.%s", fileName, fileExt);
+        File f = new File(String.format("D:\\workspace\\save\\%s", originFileName));
         response.setContentType("application/octet-stream");
-        response.setContentLength((int) file.getSize());
+        response.setContentLength((int) f.length());
 
-        response.setHeader("Content-Disposition", String.format("attachment; filename=\"%s\";", URLEncoder.encode(file.getOriginalFilename(), "utf-8")));
+        response.setHeader("Content-Disposition", String.format("attachment; filename=\"%s\";", URLEncoder.encode(originFileName, "utf-8")));
         response.setHeader("Content-Transfer-Encoding", "binary");
-
-        IOUtils.copy(file.getInputStream(), response.getOutputStream());
+        IOUtils.copy(new FileInputStream(f), response.getOutputStream());
     }
 }
