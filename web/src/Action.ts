@@ -24,7 +24,7 @@ export class Action {
         const form = $('#sendFiles')[0];
         const formData = new FormData(form);
         $.ajax({
-            url: '/fileInfos',
+            url: '/download',
             type: 'post',
             processData: false,
             contentType: false,
