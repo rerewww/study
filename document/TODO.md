@@ -6,4 +6,4 @@
     - https://medium.com/@joongwon/jvm-garbage-collection-algorithms-3869b7b0aa6f
 - [ ] Requestpart annotation
 - [ ] git warnning
-- [ ] 
+- [ ] CORS
