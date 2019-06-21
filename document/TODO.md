@@ -4,6 +4,7 @@
 - [ ] GC 정리
     - https://codeahoy.com/2017/08/06/basics-of-java-garbage-collection/
     - https://medium.com/@joongwon/jvm-garbage-collection-algorithms-3869b7b0aa6f
+    - https://d2.naver.com/helloworld/1329
 - [ ] Requestpart annotation
 - [ ] git warnning
 - [ ] CORS
