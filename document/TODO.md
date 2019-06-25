@@ -6,6 +6,7 @@
     - https://medium.com/@joongwon/jvm-garbage-collection-algorithms-3869b7b0aa6f
     - https://d2.naver.com/helloworld/1329
     - https://d2.naver.com/helloworld/329631
+    - https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html
 - [ ] Requestpart annotation
 - [ ] git warnning
 - [ ] CORS
