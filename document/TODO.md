@@ -11,4 +11,3 @@
 - [ ] git warnning
 - [ ] CORS
 - [ ] apache, nginx
-- [ ] JDK1.7, 1.8 차이
