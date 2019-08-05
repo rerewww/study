@@ -11,3 +11,4 @@
 - [ ] git warnning
 - [ ] CORS
 - [ ] apache, nginx
+- [ ] toy project
