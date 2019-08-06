@@ -8,17 +8,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <script type="text/javascript" charset="utf-8" src="/dist/build.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/dist/build.js"></script>
   </head>
   <body>
   <button cmd="checkArrayObject">TEST</button>
   <form id="sendFiles" enctype="multipart/form-data">
-    <input type="file" name="file">
-    <input type="button" cmd='upload' value="전송">
+	<input type="file" name="file">
+	<input type="button" cmd='upload' value="전송">
   </form>
   <form id="downloadFile">
-    <input type="file" name="file">
-    <input type="button" cmd='download' value="다운로드">
+	<input type="file" name="file">
+	<input type="button" cmd='download' value="다운로드">
   </form>
   <p id="result"></p>
   </body>

@@ -4,7 +4,7 @@
 import $ from 'jquery'
 
 export class Renderer {
-    public renderById(id: string, msg: any): void {
-        $('#id').val(msg);
-    }
+	public renderById(id: string, msg: any): void {
+		$('#id').val(msg);
+	}
 }

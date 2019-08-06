@@ -9,6 +9,6 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class AjaxModel {
-    private boolean success;
-    private Object data;
+	private boolean success;
+	private Object data;
 }
