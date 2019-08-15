@@ -12,3 +12,4 @@
 - [ ] CORS
 - [ ] apache, nginx
 - [ ] toy project
+- [x] spring DI
