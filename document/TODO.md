@@ -9,7 +9,8 @@
     - https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html
 - [ ] Requestpart annotation
 - [ ] git warnning
-- [ ] CORS
+- [x] CORS
 - [ ] apache, nginx
 - [ ] toy project
 - [x] spring DI
+- [ ] 블로그 포스트 템플릿 작성 혹은 다듬기
