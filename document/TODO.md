@@ -1,4 +1,3 @@
-- [ ] Automation lint
 - [ ] Jenkins 변경사항이 존재하는 경우에만 빌드하는 방법(Poll SCM)
 - [ ] Jenkins 커버리지 수치 적용하는 방법
 - [x] GC 정리
@@ -8,7 +7,6 @@
     - https://d2.naver.com/helloworld/329631
     - https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html
 - [ ] Requestpart annotation
-- [ ] git warnning
 - [x] CORS
 - [ ] apache, nginx
 - [ ] toy project
