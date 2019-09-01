@@ -12,3 +12,4 @@
 - [ ] toy project
 - [x] spring DI
 - [x] 블로그 포스트 템플릿 작성 혹은 다듬기
+- [ ] spring handlermapping
