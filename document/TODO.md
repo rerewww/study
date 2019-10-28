@@ -16,3 +16,4 @@
 - [x] Spring HanlderAdapter
 - [x] Java Collection List Map Set
 - [ ] ThreadPool
+- [ ] hash
