@@ -17,4 +17,4 @@
 - [x] Java Collection List Map Set
 - [ ] ThreadPool
 - [ ] hash
-- [ ] pubsub
+- [ ] pub/sub (redis)
